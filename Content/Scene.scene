@@ -288,7 +288,7 @@
 			"TypeName": "Game.Agent007",
 			"ParentID": "5c5d51724b31b510464f189fc196f5d0",
 			"V": {
-	"MoveToTarget": "6c56169d416311fc560cbea136c95589"
+	"MoveToTarget": "eec1467a4016e3ca314ea6a7fbb204af"
 }
 		},
 		{
@@ -297,6 +297,46 @@
 			"ParentID": "5c5d51724b31b510464f189fc196f5d0",
 			"Name": "StaticModel",
 			"Model": "3f82e57744f57c28285150b646ad2198",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "eec1467a4016e3ca314ea6a7fbb204af",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "EmptyActor",
+			"Transform": {
+				"Translation": {
+					"X": -632.335205078125,
+					"Y": 135.0347900390625,
+					"Z": 0.0
+				}
+			}
+		},
+		{
+			"ID": "8113299240a4d5324fe914b2229d5d63",
+			"TypeName": "Game.EnemyPatterns",
+			"ParentID": "eec1467a4016e3ca314ea6a7fbb204af",
+			"V": {
+	"pattern": 1,
+	"player": "6c56169d416311fc560cbea136c95589",
+	"radius": 10.0
+}
+		},
+		{
+			"ID": "fbd402a446d9156cbcaebe8ba6a9132c",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "eec1467a4016e3ca314ea6a7fbb204af",
+			"Name": "StaticModel",
+			"Model": "1b4a643d44706750b2e35ea4e11e3663",
 			"Buffer": {
 				"Entries": [
 					{
