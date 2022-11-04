@@ -17,7 +17,7 @@ namespace Game
 
         RigidBody rb;
         BulletType type;
-        bool canBounce
+        bool canBounce;
         
 
         /// <inheritdoc/>
@@ -53,12 +53,12 @@ namespace Game
 
         }
 
-        public void setType(BulletType bt){
-            type = bt;
-        }
+        //public void setType(BulletType bt){
+          //  type = bt;
+       // }
 
         public void setCanBounce(bool cb){
-            canBounce = cb
+            canBounce = cb;
         }
     }
 }

@@ -136,13 +136,13 @@
 			"Transform": {
 				"Translation": {
 					"X": 0.0,
-					"Y": 131.40809631347657,
+					"Y": 447.39910888671877,
 					"Z": 0.0
 				}
 			},
 			"StaticFlags": 0,
-			"OverrideMass": true,
-			"Constraints": 58
+			"Constraints": 58,
+			"EnableGravity": false
 		},
 		{
 			"ID": "8d7eb1334b6d3e351ba2358d38bf2e98",
@@ -155,6 +155,13 @@
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "6c56169d416311fc560cbea136c95589",
 			"Name": "Cube",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": -328.2680969238281,
+					"Z": 0.0
+				}
+			},
 			"StaticFlags": 0,
 			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
 			"Buffer": {
@@ -296,6 +303,7 @@
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "5c5d51724b31b510464f189fc196f5d0",
 			"Name": "StaticModel",
+			"StaticFlags": 0,
 			"Model": "3f82e57744f57c28285150b646ad2198",
 			"Buffer": {
 				"Entries": [
@@ -319,16 +327,16 @@
 					"Y": 135.0347900390625,
 					"Z": 0.0
 				}
-			}
+			},
+			"StaticFlags": 0
 		},
 		{
 			"ID": "8113299240a4d5324fe914b2229d5d63",
 			"TypeName": "Game.EnemyPatterns",
 			"ParentID": "eec1467a4016e3ca314ea6a7fbb204af",
 			"V": {
-	"pattern": 1,
-	"player": "6c56169d416311fc560cbea136c95589",
-	"radius": 10.0
+	"pattern": 4,
+	"player": "6c56169d416311fc560cbea136c95589"
 }
 		},
 		{
@@ -336,6 +344,7 @@
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "eec1467a4016e3ca314ea6a7fbb204af",
 			"Name": "StaticModel",
+			"StaticFlags": 0,
 			"Model": "1b4a643d44706750b2e35ea4e11e3663",
 			"Buffer": {
 				"Entries": [
