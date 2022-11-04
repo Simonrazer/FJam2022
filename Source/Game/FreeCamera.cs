@@ -37,6 +37,7 @@ public class FreeCamera : Script
 
         var inputH = Input.GetAxis("Horizontal");
         var inputV = Input.GetAxis("Vertical");
+        
         var move = new Vector3(inputH, 0.0f, inputV);
         move.Normalize();
         move = camTrans.TransformDirection(move);
