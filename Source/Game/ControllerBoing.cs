@@ -10,6 +10,13 @@ namespace Game
     
     public class ControllerBoing : Script
     {
+
+        [Tooltip("HealthPoints of the Player")]
+        public int HealthPoints{get; set;} = 5;
+
+        public bool isBat {get; set;} = false;
+        public float speed {get; set;} = 5000;
+
         [Tooltip("Dampening when no input")]
         public float SlowBreak { get; set; } = 15.0f;
         
@@ -41,7 +48,7 @@ namespace Game
         float lastDashTime = 0;
         float lastSlashCooldown = 0;
         bool isSlashing = false;
-         Vector3 slashDir = Vector3.Zero;
+        Vector3 slashDir = Vector3.Zero;
         public override void OnUpdate()
         {
             float multp = 1.0f;
@@ -49,7 +56,8 @@ namespace Game
                 lastDashTime = Time.GameTime;
                 multp = DashMultiplier;
             }
-            Vector3 wantedDir = new Vector3(Input.GetAxis("Horizontal")*5000*multp, 0 , Input.GetAxis("Vertical")*5000*multp);
+
+            Vector3 wantedDir = new Vector3(Input.GetAxis("Horizontal")*speed*multp, 0 , Input.GetAxis("Vertical")*speed*multp);
             if(!wantedDir.IsZero){
                 rb.LinearDamping = SpeedBreak;
                 rb.AddForce(wantedDir);
@@ -57,6 +65,33 @@ namespace Game
             else{
                 rb.LinearDamping = SlowBreak;
             }
+
+            //shooting
+            if(Input.GetMouseButtonDown(MouseButton.Left)){
+                Actor Bullet = PrefabManager.SpawnPrefab(PlayerBullet);
+                BulletMovement bm = Bullet.FindScript(BulletMovement);
+                bm.setCanBounce(false);
+                bm.setType(BulletType.Linear);
+                bm.create(Vector3.UP, 500); //TODO Change this to something that makes sense
+            }
         }
+
+        public void transformation(){
+            if(isBat){
+                isBat = false;
+                speed = 5000;
+                DashMultiplier = 40.0f;
+                //change model to vampire
+            }
+            else{
+                isBat = true;
+                speed = 7500;
+                DashMultiplier = 1.0f;
+                //change model to bat
+            }
+        }
+
+
+
     }
 }

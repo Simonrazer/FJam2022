@@ -58,7 +58,7 @@ namespace Game
         }
 
         public void setCanBounce(bool cb){
-            canBounce = cb
+            canBounce = cb;
         }
     }
 }
