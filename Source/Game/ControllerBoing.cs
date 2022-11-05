@@ -14,6 +14,8 @@ namespace Game
         [Tooltip("HealthPoints of the Player")]
         public int HealthPoints{get; set;} = 5;
 
+        public Prefab PlayerBullet;
+
         public bool isBat {get; set;} = false;
         public float speed {get; set;} = 5000;
 
@@ -49,6 +51,7 @@ namespace Game
         float lastSlashCooldown = 0;
         bool isSlashing = false;
         Vector3 slashDir = Vector3.Zero;
+
         public override void OnUpdate()
         {
             float multp = 1.0f;
@@ -68,11 +71,17 @@ namespace Game
 
             //shooting
             if(Input.GetMouseButtonDown(MouseButton.Left)){
-                Actor Bullet = PrefabManager.SpawnPrefab(PlayerBullet);
-                BulletMovement bm = Bullet.FindScript(BulletMovement);
+                Vector2 ScreenMiddle = Screen.Size / 2;
+                Vector2 shootDir = Input.MousePosition - ScreenMiddle;
+                shootDir.Normalize();
+                Debug.Log("SHOOT " + shootDir.ToString());
+                Actor Bullet = PrefabManager.SpawnPrefab(PlayerBullet, new Vector3(Actor.Position.X, 50, Actor.Position.Z));
+                BulletMovement bm = Bullet.FindScript<BulletMovement>();
                 bm.setCanBounce(false);
                 bm.setType(BulletType.Linear);
-                bm.create(Vector3.UP, 500); //TODO Change this to something that makes sense
+                bm.create(new Vector3(shootDir.X, 0 ,-shootDir.Y), 50000);
+                
+                
             }
         }
 

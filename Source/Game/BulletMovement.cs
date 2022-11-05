@@ -5,7 +5,7 @@ using FlaxEngine;
 namespace Game
 {
 
-    enum BulletType{
+    public enum BulletType{
         Linear, Curved, Bomb    
     }
 
@@ -30,6 +30,7 @@ namespace Game
         public override void OnEnable()
         {
             // Here you can add code that needs to be called when script is enabled (eg. register for events)
+            rb = Actor.As<RigidBody>();
         }
 
         /// <inheritdoc/>
@@ -53,9 +54,9 @@ namespace Game
 
         }
 
-        //public void setType(BulletType bt){
-          //  type = bt;
-       // }
+        public void setType(BulletType bt){
+            type = bt;
+        }
 
         public void setCanBounce(bool cb){
             canBounce = cb;

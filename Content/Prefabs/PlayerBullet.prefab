@@ -1,0 +1,56 @@
+{
+	"ID": "2c13b4d94bdbf9e8421c8c817d19e0ab",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6334,
+	"Data": [
+	{
+		"ID": "777f942644477c0861fd94b28b7a3155",
+		"TypeName": "FlaxEngine.RigidBody",
+		"Name": "PlayerBullet",
+		"Transform": {
+			"Translation": {
+				"X": -175.0,
+				"Y": 150.0,
+				"Z": 0.0
+			},
+			"Scale": {
+				"X": 0.21000003814697267,
+				"Y": 0.27000004053115847,
+				"Z": 0.21000003814697267
+			}
+		},
+		"EnableGravity": false
+	},
+	{
+		"ID": "f4c7c25a413297d13ab54b98a02ee6ef",
+		"TypeName": "Game.BulletMovement",
+		"ParentID": "777f942644477c0861fd94b28b7a3155",
+		"V": {}
+	},
+	{
+		"ID": "4a0492414e782a148cc9469dba61a97c",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "777f942644477c0861fd94b28b7a3155",
+		"Name": "Shoot",
+		"StaticFlags": 0,
+		"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "8391b6da40053a988a0959ab9f26f700",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "43b2f10e46eff4a531ddfd91c42d5134",
+		"TypeName": "FlaxEngine.BoxCollider",
+		"ParentID": "4a0492414e782a148cc9469dba61a97c",
+		"Name": "BoxCollider",
+		"StaticFlags": 0
+	}
+]
+}
