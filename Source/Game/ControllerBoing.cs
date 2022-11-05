@@ -72,9 +72,9 @@ namespace Game
                 rb.LinearDamping = SpeedBreak;
                 rb.AddForce(wantedDir);
 
+                //All this is just for Stepsounds
                 StepTimer += Time.DeltaTime;
                 if(StepTimer >= 0.5 && !isBat){
-                    Debug.Log("Stepsound");
                     int StepID = -1;
                     do {
                        StepID = rnd.Next(0,5);

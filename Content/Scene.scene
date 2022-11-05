@@ -148,7 +148,9 @@
 			"ID": "8d7eb1334b6d3e351ba2358d38bf2e98",
 			"TypeName": "Game.ControllerBoing",
 			"ParentID": "6c56169d416311fc560cbea136c95589",
-			"V": {}
+			"V": {
+	"PlayerBullet": "2c13b4d94bdbf9e8421c8c817d19e0ab"
+}
 		},
 		{
 			"ID": "e1c92bcc4eb069c29f0a5e9c605ec5ef",

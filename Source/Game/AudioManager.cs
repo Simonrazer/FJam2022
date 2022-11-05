@@ -37,6 +37,8 @@ namespace Game
         public override void OnUpdate()
         {
             // Here you can add code that needs to be called every frame
+            Debug.Log(PlayerShot.State + " " + PlayerShot.Time);
+            if(Input.GetMouseButtonUp(MouseButton.Left)) PlayerShot.Stop();
         }
 
         public void PlayEnemyBulletBounce(){
@@ -45,7 +47,6 @@ namespace Game
 
         public void PlayPlayerShot(){
             //PlayerShot.Time = 0;
-            //PlayerShot.Stop();
             PlayerShot.Play();
         }
 
