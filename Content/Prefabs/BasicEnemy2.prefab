@@ -1,0 +1,67 @@
+{
+	"ID": "75bcc2394306dbf861af29a8b2fc45da",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6334,
+	"Data": [
+	{
+		"ID": "0afdb03049288f3eeffa1fad272d6104",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"Name": "Root",
+		"StaticFlags": 0
+	},
+	{
+		"ID": "a7d40ffa4fb398b47db89aa435458be9",
+		"TypeName": "FlaxEngine.CharacterController",
+		"ParentID": "0afdb03049288f3eeffa1fad272d6104",
+		"Name": "CharacterController",
+		"StaticFlags": 0
+	},
+	{
+		"ID": "5e0bb7b5444a756680d524944be84b96",
+		"TypeName": "ExamplePlugin.Agent007",
+		"ParentID": "a7d40ffa4fb398b47db89aa435458be9",
+		"V": {
+	"MoveToTarget": "8eb35b7349cd8d84aad9d8b8437ca16e"
+}
+	},
+	{
+		"ID": "548b7192462fd398ac784f8ff9c917ae",
+		"TypeName": "Game.EnemyBasics",
+		"ParentID": "a7d40ffa4fb398b47db89aa435458be9",
+		"V": {}
+	},
+	{
+		"ID": "404c2fbf4a03dda43d5f65855782a80e",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "a7d40ffa4fb398b47db89aa435458be9",
+		"Name": "StaticModel",
+		"StaticFlags": 0,
+		"Model": "1b4a643d44706750b2e35ea4e11e3663",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "8eb35b7349cd8d84aad9d8b8437ca16e",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"ParentID": "0afdb03049288f3eeffa1fad272d6104",
+		"Name": "EmptyActor",
+		"StaticFlags": 0
+	},
+	{
+		"ID": "906d8d2d46e391b67e53cfba236181e6",
+		"TypeName": "Game.EnemyPatterns",
+		"ParentID": "8eb35b7349cd8d84aad9d8b8437ca16e",
+		"V": {
+	"pattern": 6
+}
+	}
+]
+}

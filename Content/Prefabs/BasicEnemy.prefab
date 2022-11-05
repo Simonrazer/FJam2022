@@ -1,0 +1,67 @@
+{
+	"ID": "171933244ed214784a0d5f864bd07ea8",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6334,
+	"Data": [
+	{
+		"ID": "de114dee44df68ce71c8009dc5ca1edc",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"Name": "Root",
+		"StaticFlags": 0
+	},
+	{
+		"ID": "98fb76b042dcffa2e1cd0aba0b993806",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"ParentID": "de114dee44df68ce71c8009dc5ca1edc",
+		"Name": "EmptyActor",
+		"StaticFlags": 0
+	},
+	{
+		"ID": "bee04857425239738cd272b8dffe9fd2",
+		"TypeName": "Game.EnemyPatterns",
+		"ParentID": "98fb76b042dcffa2e1cd0aba0b993806",
+		"V": {
+	"pattern": 6
+}
+	},
+	{
+		"ID": "4e4f3ecf46a96d58e24af6856706fc5a",
+		"TypeName": "FlaxEngine.CharacterController",
+		"ParentID": "de114dee44df68ce71c8009dc5ca1edc",
+		"Name": "CharacterController"
+	},
+	{
+		"ID": "a039013f471e980322d8dda8afc38489",
+		"TypeName": "ExamplePlugin.Agent007",
+		"ParentID": "4e4f3ecf46a96d58e24af6856706fc5a",
+		"V": {
+	"MoveToTarget": "98fb76b042dcffa2e1cd0aba0b993806",
+	"real_magic": true
+}
+	},
+	{
+		"ID": "b12af03a4ade35b962b950a60b5b5f42",
+		"TypeName": "Game.EnemyBasics",
+		"ParentID": "4e4f3ecf46a96d58e24af6856706fc5a",
+		"V": {}
+	},
+	{
+		"ID": "fb7ca12a48032b486a2951b479f6b255",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "4e4f3ecf46a96d58e24af6856706fc5a",
+		"Name": "StaticModel",
+		"StaticFlags": 0,
+		"Model": "3f82e57744f57c28285150b646ad2198",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	}
+]
+}

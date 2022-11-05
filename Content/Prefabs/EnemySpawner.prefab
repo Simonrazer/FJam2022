@@ -1,0 +1,29 @@
+{
+	"ID": "9e27768e4250298d4201429d2dd95532",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6334,
+	"Data": [
+	{
+		"ID": "48ae39d14971f79e58e035ae0b58c797",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"Name": "EnemySpawner"
+	},
+	{
+		"ID": "c68f50a44d81614c361d5089b1eca2de",
+		"TypeName": "Game.EnemySpawn",
+		"ParentID": "48ae39d14971f79e58e035ae0b58c797",
+		"V": {
+	"enemies": [
+		"171933244ed214784a0d5f864bd07ea8",
+		"75bcc2394306dbf861af29a8b2fc45da"
+	]
+}
+	},
+	{
+		"ID": "2c91675147f3f4c29d672bbceb1bd912",
+		"TypeName": "FlaxEngine.PointLight",
+		"ParentID": "48ae39d14971f79e58e035ae0b58c797",
+		"Name": "PointLight"
+	}
+]
+}

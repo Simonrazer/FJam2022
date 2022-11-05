@@ -15,7 +15,7 @@ namespace Game
     public class EnemyPatterns : Script
     {
         public Pattern pattern;
-        public Actor player;
+        private Actor player;
         public float radius = 100;
         public float delta = 50;
         public float speed = 1;
