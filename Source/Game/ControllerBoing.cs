@@ -33,11 +33,15 @@ namespace Game
 
         /// <inheritdoc/>
         RigidBody rb;
+        AudioManager AM;
+        Random rnd;
         Actor slashActor;
         public override void OnStart()
         {
             // Here you can add code that needs to be called when script is created, just before the first game update
             rb = Actor.As<RigidBody>();
+            AM = Actor.Scene.FindActor("AudioManager").FindScript<AudioManager>();
+            rnd = new Random();
         }
 
         /// <inheritdoc/>
@@ -52,6 +56,9 @@ namespace Game
         bool isSlashing = false;
         Vector3 slashDir = Vector3.Zero;
 
+        float StepTimer = 0;
+        int lastRandomStep = -1;
+
         public override void OnUpdate()
         {
             float multp = 1.0f;
@@ -64,6 +71,20 @@ namespace Game
             if(!wantedDir.IsZero){
                 rb.LinearDamping = SpeedBreak;
                 rb.AddForce(wantedDir);
+
+                StepTimer += Time.DeltaTime;
+                if(StepTimer >= 0.5 && !isBat){
+                    Debug.Log("Stepsound");
+                    int StepID = -1;
+                    do {
+                       StepID = rnd.Next(0,5);
+                    }
+                    while(lastRandomStep == StepID);
+                    AM.PlayStep(StepID);
+                    lastRandomStep = StepID;
+                    StepTimer = 0;
+                }
+
             }
             else{
                 rb.LinearDamping = SlowBreak;
@@ -80,7 +101,7 @@ namespace Game
                 bm.setCanBounce(false);
                 bm.setType(BulletType.Linear);
                 bm.create(new Vector3(shootDir.X, 0 ,-shootDir.Y), 50000);
-                
+                AM.PlayPlayerShot();
                 
             }
         }

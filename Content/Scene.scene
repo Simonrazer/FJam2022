@@ -291,14 +291,6 @@
 			"StaticFlags": 0
 		},
 		{
-			"ID": "27f4f5904cc28227c61daf93277a234e",
-			"TypeName": "Game.Agent007",
-			"ParentID": "5c5d51724b31b510464f189fc196f5d0",
-			"V": {
-	"MoveToTarget": "eec1467a4016e3ca314ea6a7fbb204af"
-}
-		},
-		{
 			"ID": "c7c5a1a74ab87a5fb235b6a6457274a1",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "5c5d51724b31b510464f189fc196f5d0",
@@ -335,8 +327,7 @@
 			"TypeName": "Game.EnemyPatterns",
 			"ParentID": "eec1467a4016e3ca314ea6a7fbb204af",
 			"V": {
-	"pattern": 4,
-	"player": "6c56169d416311fc560cbea136c95589"
+	"pattern": 4
 }
 		},
 		{
@@ -406,6 +397,103 @@
 			"ParentID": "be44f9184f2c4e7590a9548fb0f7b228",
 			"Name": "BoxCollider",
 			"StaticFlags": 0
+		},
+		{
+			"ID": "f5eaee4d4055045dd1d418a7c6fe5249",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "AudioManager"
+		},
+		{
+			"ID": "53494610411f73ffd7eef6993019ee7b",
+			"TypeName": "Game.AudioManager",
+			"ParentID": "f5eaee4d4055045dd1d418a7c6fe5249",
+			"V": {
+	"EnemyBulletBounce": "65815ca845c17541e38f5a804360b60b",
+	"PlayerShot": "b7df03af415bcd19430e428a1a81fbca",
+	"Steps": [
+		"7c72e2274e5fd918a22a9e93bf21f004",
+		"b887aa63448f9f2adae2a8b414bdd44d",
+		"f82fa7424e92a9d5187975932f3a40ab",
+		"3f634f7c49e3e36745f97f9545a7e170",
+		"1330832b4d7ea29ec9b941a9134e6373"
+	],
+	"Transformations": [
+		"f2dc299e455ea1877c1b89935d34a607",
+		"474ab9f14d7213772c03819c3da2a792",
+		"9f0bb8af44dedb31a4282cbf19fb7c47"
+	]
+}
+		},
+		{
+			"ID": "65815ca845c17541e38f5a804360b60b",
+			"TypeName": "FlaxEngine.AudioSource",
+			"ParentID": "f5eaee4d4055045dd1d418a7c6fe5249",
+			"Name": "EnemyShotBounce",
+			"Clip": "ab15494246e2f9bbfd8090aefbabd58e"
+		},
+		{
+			"ID": "b7df03af415bcd19430e428a1a81fbca",
+			"TypeName": "FlaxEngine.AudioSource",
+			"ParentID": "f5eaee4d4055045dd1d418a7c6fe5249",
+			"Name": "PlayerShot",
+			"Clip": "87178e6c4c952df61bf522af046dc32b"
+		},
+		{
+			"ID": "7c72e2274e5fd918a22a9e93bf21f004",
+			"TypeName": "FlaxEngine.AudioSource",
+			"ParentID": "f5eaee4d4055045dd1d418a7c6fe5249",
+			"Name": "Step 1",
+			"Clip": "bf00a2684dba80a8b3f0468c057df070"
+		},
+		{
+			"ID": "b887aa63448f9f2adae2a8b414bdd44d",
+			"TypeName": "FlaxEngine.AudioSource",
+			"ParentID": "f5eaee4d4055045dd1d418a7c6fe5249",
+			"Name": "Step 2",
+			"Clip": "9017459f4ef3ddf6886e29993e7d219d"
+		},
+		{
+			"ID": "f82fa7424e92a9d5187975932f3a40ab",
+			"TypeName": "FlaxEngine.AudioSource",
+			"ParentID": "f5eaee4d4055045dd1d418a7c6fe5249",
+			"Name": "Step 3",
+			"Clip": "3dea61f44a8f5028865f9091ffae1c84"
+		},
+		{
+			"ID": "3f634f7c49e3e36745f97f9545a7e170",
+			"TypeName": "FlaxEngine.AudioSource",
+			"ParentID": "f5eaee4d4055045dd1d418a7c6fe5249",
+			"Name": "Step 4",
+			"Clip": "ff60590c4896feb2dadbb496084c380e"
+		},
+		{
+			"ID": "1330832b4d7ea29ec9b941a9134e6373",
+			"TypeName": "FlaxEngine.AudioSource",
+			"ParentID": "f5eaee4d4055045dd1d418a7c6fe5249",
+			"Name": "Step 5",
+			"Clip": "ba1fb80a47b868924312e2bbdfbff305"
+		},
+		{
+			"ID": "f2dc299e455ea1877c1b89935d34a607",
+			"TypeName": "FlaxEngine.AudioSource",
+			"ParentID": "f5eaee4d4055045dd1d418a7c6fe5249",
+			"Name": "Transformation 1",
+			"Clip": "c0ae967e4008478e54b2b0a1b2112803"
+		},
+		{
+			"ID": "474ab9f14d7213772c03819c3da2a792",
+			"TypeName": "FlaxEngine.AudioSource",
+			"ParentID": "f5eaee4d4055045dd1d418a7c6fe5249",
+			"Name": "Transformation 2",
+			"Clip": "2ffc666045f5af6b3c4451adcc291915"
+		},
+		{
+			"ID": "9f0bb8af44dedb31a4282cbf19fb7c47",
+			"TypeName": "FlaxEngine.AudioSource",
+			"ParentID": "f5eaee4d4055045dd1d418a7c6fe5249",
+			"Name": "Transformation 3",
+			"Clip": "a01cbe624c6ad2f73012fe8943d3b2b0"
 		}
 	]
 }
