@@ -74,7 +74,7 @@ namespace Game
                 Vector2 ScreenMiddle = Screen.Size / 2;
                 Vector2 shootDir = Input.MousePosition - ScreenMiddle;
                 shootDir.Normalize();
-                Debug.Log("SHOOT " + shootDir.ToString());
+                
                 Actor Bullet = PrefabManager.SpawnPrefab(PlayerBullet, new Vector3(Actor.Position.X, 50, Actor.Position.Z));
                 BulletMovement bm = Bullet.FindScript<BulletMovement>();
                 bm.setCanBounce(false);
