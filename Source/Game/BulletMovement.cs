@@ -44,7 +44,9 @@ namespace Game
         /// <inheritdoc/>
         public override void OnUpdate()
         {
-
+            //if(Input.GetMouseButtonDown(MouseButton.Right)){
+            //    bounce(true);
+            //}
         }
 
         public void create(Vector3 direction, float speed){
