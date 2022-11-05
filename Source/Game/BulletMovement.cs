@@ -16,8 +16,10 @@ namespace Game
     {
 
         RigidBody rb;
-        BulletType type;
-        bool canBounce;
+        public BulletType type;
+        public bool canBounce;
+        public Vector3 originalDirection;
+        public float originalSpeed;
         
 
         /// <inheritdoc/>
@@ -42,16 +44,34 @@ namespace Game
         /// <inheritdoc/>
         public override void OnUpdate()
         {
-            // Here you can add code that needs to be called every frame
+
         }
 
         public void create(Vector3 direction, float speed){
             rb.AddForce(speed*direction);
+            originalDirection = direction;
+            originalSpeed = speed;
         }
 
-        //needs collision method, either bounce or destroy
         public void bounce(bool xDirection){
+            Vector3 newDir;
+            rb.AddForce(-originalSpeed*originalDirection);
 
+            if(xDirection) newDir = new Vector3(originalDirection.X, originalDirection.Y, -originalDirection.Z);
+            else newDir = new Vector3(-originalDirection.X, originalDirection.Y, originalDirection.Z);
+
+            create(newDir, originalSpeed);
+        }
+
+        //dummy method, either destroy on Wall contact or bounce, depending on bullet
+        public void Collision(){
+            if(canBounce){
+                Debug.Log("BOUNCE");
+                bounce(true);
+            }
+            else{
+                Destroy(Actor);
+            }
         }
 
         public void setType(BulletType bt){
